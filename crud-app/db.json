@@ -4,7 +4,7 @@
       "name": "Latest Wedding Dress",
       "image": "https://assets.ajio.com/medias/sys_master/root/20220114/gDKK/61e16082f997dd66232183b8/-473Wx593H-463659899-blue-MODEL.jpg",
       "title": "Women Top",
-      "price": "141414",
+      "price": "8900",
       "brand": "Denim",
       "category": "shoes",
       "gender": "Women",
@@ -81,16 +81,6 @@
       "id": 23
     },
     {
-      "name": "Latest Wedding Dress",
-      "image": "https://cdn.shopify.com/s/files/1/0089/0893/1152/files/0728_prodpg_gallery_singlepd1_new.jpg?v=6132275073042754948",
-      "title": "Botanico",
-      "price": 500,
-      "brand": "Botanico",
-      "category": "shoes",
-      "gender": "Women",
-      "id": 24
-    },
-    {
       "name": "Pin and Bellas Flores",
       "image": "https://i.pinimg.com/originals/f5/ac/4a/f5ac4a4f14eff571e0c42e238b4dc596.png",
       "brand": "Faballey",
@@ -99,5 +89,6 @@
       "gender": "Women",
       "id": 25
     }
+    
   ]
 }

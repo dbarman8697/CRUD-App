@@ -24,7 +24,7 @@ export const addProduct = (newProduct) => (dispatch) => {
 
 export const getProducts = (paramObj) => (dispatch) => {
   dispatch({ type: PRODUCT_REQUEST });
-
+  console.log(paramObj);
   return axios
     .get("http://localhost:8080/products", paramObj)
     .then((res) => {

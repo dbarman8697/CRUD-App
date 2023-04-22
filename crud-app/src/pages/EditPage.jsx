@@ -11,8 +11,10 @@ const EditPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const data = products.find((el) => el.id === +id);
+    const data = products?.find((el) => el.id === +id);
+    // setPrice(data&&data.price);
     setPrice(data.price);
+    console.log(data);
   }, []);
 
   const handleChange = (e) => {
@@ -27,7 +29,7 @@ const EditPage = () => {
 
   return (
     <div>
-      <h1>{id}</h1>
+      <h1>ID: {id}</h1>
       <input type="number" value={price} onChange={handleChange} />
       <button onClick={handleEdit}>Update</button>
     </div>

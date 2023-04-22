@@ -14,6 +14,7 @@ const Navbar = () => {
   const paramObj = {
     params: {
       q: query && query,
+      _limit: 3,
     },
   };
 
@@ -39,7 +40,7 @@ const Navbar = () => {
       <Link to={"/login"}>
         <h3>Login</h3>
       </Link>
-      <Link to={`/edit/1}`}>
+      <Link to={"/edit/1"}>
         <h3>Edit</h3>
       </Link>
       <input

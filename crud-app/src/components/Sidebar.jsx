@@ -13,6 +13,9 @@ const Sidebar = () => {
   const initialOrder = serachParams.get("order");
   const [order, setOrder] = useState(initialOrder || "");
 
+  const initialPage = serachParams.getAll("page");
+  const [page, setPage] = useState(+initialPage || 1);
+
   //   console.log(serachParams.getAll("gender"));
 
   useEffect(() => {
@@ -24,6 +27,24 @@ const Sidebar = () => {
 
     setSearchParams(params);
   }, [gender, category, order]);
+
+  useEffect(() => {
+    let params = {
+      page,
+      _limit: 2,
+    };
+    setSearchParams(params);
+  }, [page]);
+
+  const handlePage = (value) => {
+    setPage((prev) => {
+      if (prev + value === 0) {
+        return prev;
+      }
+
+      return prev + value;
+    });
+  };
 
   //http://localhost:3000/?gender=Men&gender=Women&gender=Kids //for this
 
@@ -152,18 +173,23 @@ const Sidebar = () => {
       <br />
       <br />
       <DIV>
-        <h3 data-testid="page-number">Page No. </h3>
+        <h3 data-testid="page-number">Page No. {page}</h3>
         <button
           data-testid="previous-page"
           onClick={() => {
-            // handlePage(-1);
+            handlePage(-1);
           }}
         >
           Previous
         </button>
         <br />
         <br />
-        <button data-testid="next-page" onClick={() => {}}>
+        <button
+          data-testid="next-page"
+          onClick={() => {
+            handlePage(1);
+          }}
+        >
           Next
         </button>
       </DIV>

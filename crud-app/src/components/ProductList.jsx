@@ -22,6 +22,8 @@ const ProductList = () => {
       category: serachParams.getAll("category"),
       _sort: serachParams.get("order") && "price",
       _order: serachParams.get("order"),
+      _page: serachParams.get("page"),
+      _limit: 3,
     },
   };
 

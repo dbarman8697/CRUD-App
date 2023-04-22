@@ -5,7 +5,7 @@ import MainRoutes from "./pages/MainRoutes";
 function App() {
   return (
     <div className="App">
-      <h1>CRUP App</h1>
+      <h1>CRUD APP</h1>
       <Navbar />
       <MainRoutes />
     </div>
